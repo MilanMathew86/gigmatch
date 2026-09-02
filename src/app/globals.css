@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+:root {
+  /* ---- Core palette ---- */
+  --color-bg: #F2F4EF;
+  --color-surface: #FFFFFF;
+  --color-surface-2: #E9ECE3;
+  --color-border: #DCE0D5;
+  --color-ink: #14161A;
+  --color-ink-muted: #5B6058;
+  --color-ink-faint: #8B9089;
+
+  /* Brand: deep teal-green (trust / verification) */
+  --color-brand: #1B4B3F;
+  --color-brand-ink: #0E2E26;
+  --color-brand-tint: #E3EEE9;
+
+  /* Accent: warm coral (energy / primary action) */
+  --color-accent: #E5602F;
+  --color-accent-hover: #CC4E22;
+  --color-accent-tint: #FCE6DB;
+
+  --color-gold: #B08A2E;
+
+  --shadow-sm: 0 1px 2px rgba(20, 22, 20, 0.06);
+  --shadow-md: 0 8px 24px -8px rgba(20, 22, 20, 0.18);
+  --shadow-lg: 0 24px 60px -20px rgba(14, 46, 38, 0.28);
+}
+
+@theme inline {
+  --color-bg: var(--color-bg);
+  --color-surface: var(--color-surface);
+  --color-surface-2: var(--color-surface-2);
+  --color-border: var(--color-border);
+  --color-ink: var(--color-ink);
+  --color-ink-muted: var(--color-ink-muted);
+  --color-ink-faint: var(--color-ink-faint);
+  --color-brand: var(--color-brand);
+  --color-brand-ink: var(--color-brand-ink);
+  --color-brand-tint: var(--color-brand-tint);
+  --color-accent: var(--color-accent);
+  --color-accent-hover: var(--color-accent-hover);
+  --color-accent-tint: var(--color-accent-tint);
+  --color-gold: var(--color-gold);
+
+  --font-display: "Sora", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  --shadow-sm: var(--shadow-sm);
+  --shadow-md: var(--shadow-md);
+  --shadow-lg: var(--shadow-lg);
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  text-wrap: balance;
+  letter-spacing: -0.015em;
+}
+
+.font-tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+::selection {
+  background: var(--color-accent-tint);
+  color: var(--color-accent-hover);
+}
